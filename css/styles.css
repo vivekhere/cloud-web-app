@@ -10,7 +10,7 @@
 }
 
 *,
-*::after, 
+*::after,
 *::before {
   box-sizing: border-box;
 }
@@ -28,7 +28,9 @@ body {
   color: var(--color-body);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--color-headings);
   margin-bottom: 1rem;
 }
@@ -81,7 +83,7 @@ a {
 }
 
 .link-arrow::after {
-  content: '-->';
+  content: "-->";
   margin-left: 5px;
   transition: margin 0.15s;
 }
@@ -367,7 +369,7 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
-} 
+}
 
 @media screen and (min-width: 1024px) {
   .plan__name {
@@ -431,7 +433,7 @@ a {
 
 .quote__organization {
   color: var(--color-headings);
-  opacity: .4;
+  opacity: 0.4;
   font-size: 2rem;
   font-style: normal;
 }
@@ -544,4 +546,37 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsibles */
+
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
 }
