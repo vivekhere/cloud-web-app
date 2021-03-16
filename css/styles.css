@@ -348,7 +348,7 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
-}
+} 
 
 @media screen and (min-width: 1024px) {
   .plan__name {
